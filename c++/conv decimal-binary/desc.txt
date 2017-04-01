@@ -1,0 +1,3 @@
+Questo è un semplice programma di conversione da numero in formato decimale, a numero in formato binario o viceversa.
+Al momento è compatibile con:
+- Windows
