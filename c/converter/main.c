@@ -39,26 +39,44 @@ int main(int argc, char **argv)
         if(backMenu() == 121){
            clear();
         goto start;
-        
         }
+        
         break;
         case 2:
         printf("Insert value: ");
         scanf("%lf", &val);
         
         printf("%f",celToK(&val, &converted));
+        
+        if(backMenu() == 121){
+           clear();
+        goto start;
+        }
+        
         break;
         case 3:
         printf("Insert value: ");
         scanf("%lf", &val);
         
         printf("%f",FarToCel(&val, &converted));
+        
+        if(backMenu() == 121){
+           clear();
+        goto start;
+        }
+        
         break;
         case 4:
         printf("Insert value: ");
         scanf("%lf", &val);
         
         printf("%f",FarToK(&val, &converted));
+        
+        if(backMenu() == 121){
+           clear();
+        goto start;
+        }
+        
         break;
         
         case 5:
@@ -66,12 +84,24 @@ int main(int argc, char **argv)
         scanf("%lf", &val);
         
         printf("%f",kToCel(&val, &converted));
+        
+        if(backMenu() == 121){
+           clear();
+        goto start;
+        }
+        
         break;
         case 6:
         printf("Insert value: ");
         scanf("%lf", &val);
         
         printf("%f",kToFar(&val, &converted));
+        
+        if(backMenu() == 121){
+           clear();
+        goto start;
+        }
+        
         break;
     }
     
@@ -132,7 +162,9 @@ void menu(){
     const char *c[] = { "1. Celsius to Farheneit", "2. Celsius to Kelvin", "3. Fahreneit to Celsius",
                 "4. Fahreneit to Kelvin", "5. Kelvin to Celsius", "6. Kelvin to Fahreneit"};
     
-    for (int i=0; i< 6; i++)
+    const int N = ( sizeof(c) / sizeof(c[0]) );
+    
+    for (int i=0; i< N; i++)
     printf("%s\n", c[i]);
     
 }
